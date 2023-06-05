@@ -6,16 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/greetings")
-public class GreetingsController {
+@RequestMapping("/api/v1/demo")
+public class UserController {
 
-    @GetMapping("/hello")
+    @GetMapping
     public ResponseEntity<String> sayHello() {
-        return ResponseEntity.ok("Hello from First API!");
+        return ResponseEntity.ok("Secured Endpoint!");
     }
 
-    @GetMapping("/bye")
-    public ResponseEntity<String> goodBye() {
-        return ResponseEntity.ok("Good Bye from Second API!");
-    }
 }
